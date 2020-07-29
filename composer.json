@@ -11,6 +11,7 @@
             "email": "lrd0421@163.com"
         }
     ],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "TIMUtil\\": "src/"
