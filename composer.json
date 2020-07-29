@@ -1,0 +1,14 @@
+{
+    "name": "reader/tim-util",
+    "type": "library",
+    "require": {
+        "tencent/tls-sig-api-v2": "1.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "authors": [
+        {
+            "name": "reader",
+            "email": "lrd0421@163.com"
+        }
+    ]
+}
