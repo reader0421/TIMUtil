@@ -1,5 +1,5 @@
 <?php
-
+namespace TIMUtil\Tag;
 
 class TagIM
 {

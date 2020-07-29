@@ -10,5 +10,10 @@
             "name": "reader",
             "email": "lrd0421@163.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "TIMUtil\\": "src/"
+        }
+    }
 }

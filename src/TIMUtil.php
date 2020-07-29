@@ -137,8 +137,6 @@ class TIMUtil
                 return false;
             }
             $body = $response->getBody()->getContents();
-            $body = json_decode($body,true);
-
             if (!empty($body) && !empty($body = json_decode($body))) {
                 if (!empty($body->ErrorCode) || !isset($body->ActionStatus) || (strtolower($body->ActionStatus) !== 'ok')) {
                     $this->errMsg = $body->ErrorInfo ?? '请求失败';
