@@ -26,7 +26,7 @@ class Account extends TIMUtil
      * 用户头像 URL
      * @return bool|mixed
      */
-    public function accountImport($identifier,$nick='',$faceUrl='')
+    public function accountImport(string $identifier,$nick='',$faceUrl='')
     {
         $data = [
             'Identifier'=>$identifier,
