@@ -145,8 +145,8 @@ class TIMUtil
                 }
                 return $body;
             }
-            $this->errMsg = -1;
-            $this->errCode = '请求失败';
+            $this->errMsg = '请求失败';
+            $this->errCode = -1;
             return false;
         }catch (\Exception $e){
             $this->errMsg = $e->getMessage();
