@@ -69,6 +69,8 @@ class MsgBuilder
      */
     protected $OfflinePushInfo = null;
 
+    protected $ForbidCallbackControl = [];
+
     public function __construct()
     {
         $this->MsgRandom = mt_rand(0, 4294967295);
@@ -156,6 +158,18 @@ class MsgBuilder
     }
 
     /**
+     * 消息回调禁止开关，只对本条消息有效
+     * @param array $callbacks
+     * ForbidBeforeSendMsgCallback 表示禁止发消息前回调，ForbidAfterSendMsgCallback 表示禁止发消息后回调
+     * @return $this
+     */
+    public function setForbidCallbackControl($callbacks=[])
+    {
+        $this->ForbidCallbackControl = $callbacks;
+        return $this;
+    }
+
+    /**
      * 清空消息内容
      * @return $this
      */
@@ -214,6 +228,7 @@ class MsgBuilder
         $data['MsgRandom'] = $this->MsgRandom;
         $data['MsgTimeStamp'] = $this->MsgTimeStamp;
         $data['MsgBody'] = $this->MsgBody;
+        $data['ForbidCallbackControl'] = $this->ForbidCallbackControl;
         if(!is_null($this->OfflinePushInfo)){
             $data['OfflinePushInfo'] = $this->OfflinePushInfo;
         }
